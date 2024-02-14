@@ -1,6 +1,4 @@
 name: Enable automerge on dependabot PRs
-
-name: Enable automerge on dependabot PRs
 'on':
   pull_request_target: null
 jobs:
@@ -14,4 +12,3 @@ jobs:
           github-token: '${{ secrets.PERSONAL_ACCESS_TOKEN }}'
           allowed-author: 'dependabot[bot]'
           merge-method: MERGE
-
