@@ -19,8 +19,5 @@ jobs:
           # The name of the PR author to enable automerge for
           # Defaults to dependabot[bot]
           allowed-author: "dependabot[bot]"
-
-          # Allowed values: MERGE | SQUASH | REBASE
-          # Defaults to MERGE
           merge-method: MERGE
 
