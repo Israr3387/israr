@@ -9,6 +9,6 @@ jobs:
       - name: Enable automerge on dependabot PRs
         uses: daneden/enable-automerge-action@v1
         with:
-          github-token: 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
+          github-token: $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
           allowed-author: 'dependabot[bot]'
           merge-method: MERGE
