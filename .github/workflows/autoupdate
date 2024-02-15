@@ -1,0 +1,23 @@
+name: Auto Update
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  autoupdate:
+    name: Auto Update
+    runs-on: ubuntu-latest
+    steps:
+      - uses: israr/autoUpdate@main
+        env:
+          GITHUB_TOKEN: "${{ secrets.CX_GITHUB_PAT }}"
+          PR_READY_STATE: "ready_for_review"
+          PR_LABELS: "autoupdate"
+          PR_FILTER: "labelled"
+
+      - run: echo 'Merge conflicts found!'
+        if: ${{ steps.autoupdate.outputs.conflicted }}
+
+      - run: echo 'No merge conflicts'
+        if: ${{ !steps.autoupdate.outputs.conflicted }}
