@@ -1,9 +1,6 @@
 name: Enable automerge on dependabot PRs
-
-on:
-  # See note below about using pull_request_target
-  pull_request_target:
-
+'on':
+  pull_request_target: null
 jobs:
   automerge:
     name: Enable automerge on dependabot PRs
@@ -11,4 +8,7 @@ jobs:
     steps:
       - name: Enable automerge on dependabot PRs
         uses: daneden/enable-automerge-action@v1
-      
+        with:
+          github-token: '${{ secrets.PERSONAL_ACCESS_TOKEN }}'
+          allowed-author: 'dependabot[bot]'
+          merge-method: MERGE
