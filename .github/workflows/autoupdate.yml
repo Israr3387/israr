@@ -9,7 +9,7 @@ jobs:
     name: Auto Update
     runs-on: ubuntu-latest
     steps:
-      - uses: israr
+      - uses: tibdex/auto-update@v2
         env:
           GITHUB_TOKEN: "${{ secrets.CX_GITHUB_PAT }}"
           PR_READY_STATE: "ready_for_review"
