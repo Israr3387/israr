@@ -33,3 +33,4 @@ jobs:
           UPDATE_METHOD: rebase
           UPDATE_RETRIES: '120'
           UPDATE_RETRY_SLEEP: '60000'
+          #automerge
